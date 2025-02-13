@@ -27,6 +27,11 @@ mongoose.connection.on("error", (err) => {
 
 app.use("/api/todos", todoRoutes);
 
+server.get("/", (req, res) => {
+  res.send("Backend for TODO_APP.");
+});
+
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
