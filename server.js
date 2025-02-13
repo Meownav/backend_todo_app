@@ -27,7 +27,7 @@ mongoose.connection.on("error", (err) => {
 
 app.use("/api/todos", todoRoutes);
 
-server.get("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Backend for TODO_APP.");
 });
 
